@@ -1,0 +1,11 @@
+{
+  "name": "majj",
+  "description": "tool for hosting user uploaded images",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "4.4.3",
+    "aws-sdk": "2.0.0-rc.20",
+    "moment": "2.7.0"
+  }
+}
