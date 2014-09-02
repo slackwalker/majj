@@ -2,11 +2,11 @@ var express = require("express");
 var app = express();
 
 var policy = require("./policy");
-var db_image = require("./db_image");
+var image = require("./image");
 
 app.get("/test", function(req, res) {
   var key = "";
-  db_image.makeUniqueKey(function(err, key) {
+  image.makeUniqueKey(function(err, key) {
     if (err) {
       console.log(err, err.stack);
     } else {
@@ -18,7 +18,7 @@ app.get("/test", function(req, res) {
 
 });
 
-db_image.imageTableReady(function(err, data) {
+image.imageTableReady(function(err, data) {
   if (err) {
     console.log(err, err.stack);
   } else {
